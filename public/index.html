@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller de Comunicación</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body id="body">
+    <main>
+      <div class="container">
+        <div class="row sliders">
+          <div class="col-md-12">
+            <h1>Presentacion tecnología</h1>
+            <h3>Materia: Taller de Comunicación</h3>
+          </div>
+          <div class="col-md-12">
+            <div class="shape-divider">
+              <img
+                data-aos="zoom-in-down"
+                data-aos-duration="1500"
+                src="inicio.svg"
+                alt=""
+              />
+              <div data-aos="zoom-out-down" data-aos-duration="2000">
+                <h2>CHAR.JS</h2>
+                <h6>
+                  Entre muchas bibliotecas de gráficos para desarrolladores de
+                  aplicaciones de JavaScript, Chart.js es actualmente la más
+                  popular.
+                </h6>
+              </div>
+            </div>
+            <div
+              class="content-text"
+              data-aos="zoom-in-up"
+              data-aos-duration="3000"
+            >
+              <h3>Caracteristicas</h3>
+              <p>
+                Chart.js proporciona un conjunto de tipos de gráficos,
+                complementos y opciones de personalización de uso frecuente.
+                Además de un conjunto razonable de tipos de gráficos integrados
+                , puede usar tipos de gráficos adicionales mantenidos por la
+                comunidad . Además de eso, es posible combinar varios tipos de
+                gráficos en un gráfico mixto (básicamente, combinar varios tipos
+                de gráficos en uno en el mismo lienzo). Chart.js es altamente
+                personalizable con complementos personalizados para crear
+                anotaciones, zoom o funcionalidades de arrastrar y soltar, por
+                nombrar algunas cosas. valores predeterminados
+              </p>
+            </div>
+          </div>
+          <a href="#implementacion" id="icon">
+            <i class="fa fa-angle-down"></i>
+          </a>
+        </div>
+
+        <div class="row sliders implementacion" id="implementacion">
+          <div class="col-md-12">
+            <h3>Pasos para su implementacion en nuestra aplicacion</h3>
+            <p data-aos="zoom-out-up" data-aos-duration="2000">
+              Primero, necesitamos tener una etiqueta canvas en nuestra página.
+              Se recomienda darle al gráfico su propio contenedor para la
+              capacidad de respuesta
+            </p>
+            <img
+              src="img-taller.png"
+              alt=""
+              data-aos="flip-left"
+              data-aos-duration="3000"
+            />
+            <p data-aos="zoom-out-up" data-aos-duration="2000">
+              Ahora que tenemos un canvas, podemos incluir Chart.js desde un
+              CDN.
+            </p>
+            <img
+              src="img-taller1.png"
+              alt=""
+              data-aos="flip-left"
+              data-aos-duration="3000"
+            />
+            <p data-aos="zoom-out-up" data-aos-duration="2000">
+              Finalmente, podemos crear un gráfico. Agregamos un script que
+              llame el elemento "myChart" y lo instancia new Chart con la
+              configuración deseada: tipo de gráfico, etiquetas, datos y
+              opciones.
+            </p>
+            <div class="content-btn">
+              <img
+                src="img-taller2.png"
+                alt=""
+                data-aos="flip-left"
+                data-aos-duration="3000"
+              />
+              <buttom id="btnEj" onclick="openModal()"
+                >Veamos un ejemplo</buttom
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <footer>
+            <p>Presentado por Andres Hoyos</p>
+          </footer>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" role="dialog" id="dialog">
+        <div class="modal-dialog" role="document" id="contentChart">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Char.js</h2>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="closeModal()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <br />
+            <div class="content-graph">
+              <div>
+                <canvas id="chartPie"></canvas>
+              </div>
+              <div>
+                <canvas id="chartBar"></canvas>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                onclick="closeModal()"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
